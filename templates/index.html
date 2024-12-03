@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather-Based Outfit Selector</title>
+    <!-- <link rel="stylesheet" href="static/styles.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+
+<body>
+    <header>
+        <h1>Today's Outfit Suggestions</h1>
+        <p>Based on your local weather 🌦️</p>
+    </header>
+    <main>
+        <!-- Tabs Navigation -->
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="upload">Upload Outfits</button>
+            <button class="tab-btn" data-tab="recommendations">Recommended Outfits</button>
+        </div>
+
+        <!-- Upload Section -->
+        <section id="upload" class="tab-content active">
+            <h2>Upload Your Outfit</h2>
+            <form id="upload-form">
+                <input type="file" id="file-input" accept="image/*" multiple>
+                <button type="button" id="upload-btn">Upload</button>
+            </form>
+        </section>
+
+        <!-- Recommendations Section -->
+        <section id="recommendations" class="tab-content">
+            <h2>Recommended Outfits</h2>
+
+            <!-- Location Input -->
+            <div class="location-input">
+                <input type="text" id="location-input" placeholder="Enter your location (e.g., Boston)">
+                <button type="button" id="confirm-location">Confirm</button>
+            </div>
+
+            <!-- Outfit Recommendations -->
+            <div id="outfit-list" class="outfit-list">
+                <!-- Outfit suggestions will appear here -->
+            </div>
+        </section>
+    </main>
+
+
+    <footer>
+        <p>© 2024 Your Weather Wardrobe. All rights reserved.</p>
+    </footer>
+
+    <script src="{{url_for('static', filename='script.js') }}"></script>
+    "></script>
+</body>
+
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather-Based Outfit Selector</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Today's Outfit Suggestions</h1>
+    <p>Based on your local weather 🌦️</p>
+  </header>
+  <main>
+    <section class="upload-section">
+      <h2>Upload Your Outfit</h2>
+      <form id="upload-form">
+        <input type="file" id="file-input" accept="image/*" multiple>
+        <button type="button" id="upload-btn">Upload</button>
+      </form>
+    </section>
+
+    <section class="recommendations">
+      <h2>Recommended Outfits</h2>
+      <div id="outfit-list" class="outfit-list">
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2024 Your Weather Wardrobe. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html> -->
